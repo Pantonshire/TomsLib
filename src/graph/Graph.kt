@@ -1,8 +1,8 @@
 package graph
 
-class Graph<T> {
+open class Graph<T> {
 
-    val adjacencyMap: MutableMap<T, MutableList<Pair<T, Double>>> = mutableMapOf()
+    private val adjacencyMap: MutableMap<T, MutableList<Pair<T, Double>>> = mutableMapOf()
 
     fun addNode(node: T) {
         if(!adjacencyMap.containsKey(node)) {
