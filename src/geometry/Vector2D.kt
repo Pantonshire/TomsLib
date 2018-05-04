@@ -28,6 +28,28 @@ class Vector2D(var x: Double = 0.0, var y: Double = 0.0) {
             Angle(Math.atan2(y, x))
 
 
+    fun floored(): Vector2D =
+            Vector2D(Math.floor(x), Math.floor(y))
+
+
+    fun floor(): Vector2D {
+        x = Math.floor(x)
+        y = Math.floor(y)
+        return this
+    }
+
+
+    fun rounded(): Vector2D =
+            Vector2D(Math.round(x).toDouble(), Math.round(y).toDouble())
+
+
+    fun round(): Vector2D {
+        x = Math.round(x).toDouble()
+        y = Math.round(y).toDouble()
+        return this
+    }
+
+
     infix fun dotP(other: Vector2D): Double =
             x * other.x + y * other.y
 
